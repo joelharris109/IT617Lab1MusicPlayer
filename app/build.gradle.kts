@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.joelharris.lab1musicplayer"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.joelharris.lab1musicplayer"

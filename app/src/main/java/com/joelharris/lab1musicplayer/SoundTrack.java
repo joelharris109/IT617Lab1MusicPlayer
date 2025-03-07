@@ -4,6 +4,4 @@ public class SoundTrack {
     String name;
     String artist;
     String copyright;
-    
-
 }

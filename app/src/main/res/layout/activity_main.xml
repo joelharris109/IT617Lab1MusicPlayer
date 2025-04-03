@@ -7,15 +7,77 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center"
     tools:context=".MainActivity">
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="599dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="71dp" />
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="top">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tropical_soul"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:textStyle="bold"
+            android:layout_gravity="start|center"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:hint="Luke Bergs"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="10dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="top">
+
+        <TextView
+            android:id="@+id/heroism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="Heroism"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/maxkomusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hint="Maxkomusic"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="10dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="top">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="370dp"/>
 </LinearLayout>

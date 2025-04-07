@@ -36,6 +36,14 @@
             android:paddingStart="20dp"
             android:paddingEnd="0dp"
             android:paddingBottom="10dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="end|center"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -64,6 +72,14 @@
             android:paddingEnd="0dp"
             android:paddingBottom="10dp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="end|center"/>
     </androidx.cardview.widget.CardView>
 
 
@@ -73,11 +89,34 @@
         android:layout_marginBottom="5dp"
         android:layout_gravity="top">
 
+        <TextView
+            android:id="@+id/PowerfulTrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:text="Powerful Trap"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Powerful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:hint="Powerful"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="10dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="end|center"/>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="370dp"/>
 </LinearLayout>

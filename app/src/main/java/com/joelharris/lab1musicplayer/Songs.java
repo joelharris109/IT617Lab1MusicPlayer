@@ -1,6 +1,6 @@
 package com.joelharris.lab1musicplayer;
 
-public class Songs extends SoundTrack
+public class Songs
 {
     Songs song1 = new Songs();
 

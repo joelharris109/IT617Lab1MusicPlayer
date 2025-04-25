@@ -43,7 +43,8 @@
             android:layout_height="wrap_content"
             android:text="@string/play"
             android:layout_marginEnd="10dp"
-            android:layout_gravity="end|center"/>
+            android:layout_gravity="end|center"
+            android:onClick="Soundtrack"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

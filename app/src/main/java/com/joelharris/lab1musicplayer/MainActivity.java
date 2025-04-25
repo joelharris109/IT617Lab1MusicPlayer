@@ -1,6 +1,8 @@
 package com.joelharris.lab1musicplayer;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -24,4 +26,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void Soundtrack(View view) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.luke_bergs_tropical_soul);
+        mediaPlayer.start();
+    }
 }

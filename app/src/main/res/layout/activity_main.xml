@@ -9,6 +9,10 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"/>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -44,7 +48,7 @@
             android:text="@string/play"
             android:layout_marginEnd="10dp"
             android:layout_gravity="end|center"
-            android:onClick="Soundtrack"/>
+            android:onClick="Soundtrack1"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

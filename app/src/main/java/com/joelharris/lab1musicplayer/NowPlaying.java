@@ -1,6 +1,9 @@
 package com.joelharris.lab1musicplayer;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.MediaController;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,11 @@ public class NowPlaying extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void Soundtrack1Control(View view)
+    {
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        mediaPlayer.pause();
     }
 }

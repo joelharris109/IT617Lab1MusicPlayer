@@ -3,6 +3,7 @@ package com.joelharris.lab1musicplayer;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.action_playing);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
     @Override
     public boolean onOptionsItemSelected( @NonNull MenuItem item) {
         if(item.getItemId() == R.id.action_playing){
@@ -45,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void Soundtrack1(View view) {
         MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.luke_bergs_tropical_soul);
+        mediaPlayer.start();
+    }
+
+    public void Soundtrack2(View view) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.maxkomusic_heroism);
+        mediaPlayer.start();
+    }
+
+    public void Soundtrack3(View view) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.powerful_trap);
         mediaPlayer.start();
     }
 

@@ -13,13 +13,6 @@
         layout="@layout/toolbar_main"
         android:id="@+id/action_playing"/>
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:id="@+id/toolbar"
-        android:background="?attr/colorPrimary"/>
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="80dp"

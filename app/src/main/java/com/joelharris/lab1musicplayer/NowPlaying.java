@@ -25,9 +25,9 @@ public class NowPlaying extends AppCompatActivity {
         });
     }
 
-    public void Soundtrack1Control(View view)
+    SoundTrack st = new SoundTrack();
+    public void SoundtrackControl(View view)
     {
-        MediaPlayer mediaPlayer = new MediaPlayer();
-        mediaPlayer.pause();
+        st.SoundtrackPause(this, view);
     }
 }

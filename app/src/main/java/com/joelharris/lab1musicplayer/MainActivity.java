@@ -18,14 +18,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.action_playing);
         setSupportActionBar(toolbar);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -49,19 +49,18 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    SoundTrack st = new SoundTrack();
+
     public void Soundtrack1(View view) {
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.luke_bergs_tropical_soul);
-        mediaPlayer.start();
+        st.Soundtrack1(this, view);
     }
 
     public void Soundtrack2(View view) {
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.maxkomusic_heroism);
-        mediaPlayer.start();
+        st.Soundtrack2(this, view);
     }
 
     public void Soundtrack3(View view) {
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.powerful_trap);
-        mediaPlayer.start();
+        st.Soundtrack3(this, view);
     }
 
 

@@ -64,13 +64,13 @@ public class SoundTrack
 
     public void SoundtrackPause(Context context, View view)
     {
-        if(!mediaPlayer.isPlaying())
+        if(mediaPlayer.isPlaying())
         {
-            mediaPlayer.start();
+            mediaPlayer.pause();
         }
         else
         {
-            mediaPlayer.pause();
+            mediaPlayer.stop();
         }
     }
 }

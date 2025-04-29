@@ -6,22 +6,24 @@ import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SoundTrack
 {
-
-
+    public String title;
+    public String artist;
 
     public SoundTrack()
     {
         ArrayList<String> copyright = new ArrayList<String>();
 
-        String title;
-        String artist;
-
+        //String title;
+        //String artist;
     }
 
     MediaPlayer mediaPlayer = new MediaPlayer();
@@ -34,7 +36,9 @@ public class SoundTrack
         }
         else
         {
-            mediaPlayer.pause();
+            mediaPlayer.stop();
+            mediaPlayer = MediaPlayer.create(context, R.raw.luke_bergs_tropical_soul);
+            mediaPlayer.start();
         }
     }
 
@@ -46,7 +50,9 @@ public class SoundTrack
         }
         else
         {
-            mediaPlayer.pause();
+            mediaPlayer.stop();
+            mediaPlayer = MediaPlayer.create(context, R.raw.maxkomusic_heroism);
+            mediaPlayer.start();
         }
     }
 
@@ -58,11 +64,13 @@ public class SoundTrack
         }
         else
         {
-            mediaPlayer.pause();
+            mediaPlayer.stop();
+            mediaPlayer = MediaPlayer.create(context, R.raw.powerful_trap);
+            mediaPlayer.start();
         }
     }
 
-    public void SoundtrackPause(Context context, View view)
+    public void SoundtrackPause(View view)
     {
         if(!mediaPlayer.isPlaying())
         {
@@ -73,4 +81,5 @@ public class SoundTrack
             mediaPlayer.pause();
         }
     }
+
 }

@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
@@ -19,6 +20,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,15 +54,32 @@ public class MainActivity extends AppCompatActivity{
     SoundTrack st = new SoundTrack();
 
     public void Soundtrack1(View view) {
+        setContentView(R.layout.activity_now_playing);
+        TextView song_name = (TextView) findViewById(R.id.music_name);
+        String songname = "Tropical Souls";
         st.Soundtrack1(this, view);
+        song_name.setText(songname);
     }
 
     public void Soundtrack2(View view) {
+        setContentView(R.layout.activity_now_playing);
+        TextView song_name = (TextView) findViewById(R.id.music_name);
+        String songname = "Heroism";
         st.Soundtrack2(this, view);
+        song_name.setText(songname);
     }
 
     public void Soundtrack3(View view) {
+        setContentView(R.layout.activity_now_playing);
+        TextView song_name = (TextView) findViewById(R.id.music_name);
+        String songname = "Powerful Trap";
         st.Soundtrack3(this, view);
+        song_name.setText(songname);
+    }
+
+    public void SoundtrackControl(View view)
+    {
+        st.SoundtrackPause(view);
     }
 
 }

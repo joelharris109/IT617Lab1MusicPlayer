@@ -2,6 +2,7 @@ package com.joelharris.lab1musicplayer;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class SoundTrack
     }
 
     public void Soundtrack1(Context context, View view) {
-        changeTitle("Tropical Soul");
+        //changeTitle("Tropical Soul");
         if(!mediaPlayer.isPlaying())
         {
             mediaPlayer = MediaPlayer.create(context, R.raw.luke_bergs_tropical_soul);
@@ -82,4 +83,10 @@ public class SoundTrack
             mediaPlayer.pause();
         }
     }
+
+    public void SoundtrackStop(View view)
+    {
+        mediaPlayer.stop();
+    }
+
 }

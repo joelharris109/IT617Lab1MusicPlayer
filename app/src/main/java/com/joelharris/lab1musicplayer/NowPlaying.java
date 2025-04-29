@@ -24,18 +24,16 @@ public class NowPlaying extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        SongName();
-    }
-    ;
-    public void SoundtrackControl(View view)
-    {
-        SongName();
     }
 
-    public void SongName()
+    SoundTrack st = new SoundTrack();
+    public void SoundtrackControl(View view)
     {
-        SoundTrack st = new SoundTrack();
-        TextView song_name = findViewById(R.id.music_name);
-        song_name.setText(st.title);
+        st.SoundtrackPause(view);
+    }
+
+    public void SoundTrackStop(View view)
+    {
+        st.SoundtrackStop(view);
     }
 }

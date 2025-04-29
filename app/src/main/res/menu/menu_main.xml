@@ -4,7 +4,7 @@
 
     <item android:title="nowPlaying"
         android:id="@+id/action_playing"
-        android:icon="@drawable/baseline_arrow_drop_up_24"
+        android:icon="@drawable/baseline_assistant_navigation_24"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"

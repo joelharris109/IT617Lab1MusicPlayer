@@ -56,20 +56,35 @@ public class MainActivity extends AppCompatActivity{
     NowPlaying np = new NowPlaying();
 
     public void Soundtrack1(View view) {
+        setContentView(R.layout.activity_now_playing);
         st.Soundtrack1(this, view);
+        TextView song_name = findViewById(R.id.music_name);
+        song_name.setText("Tropical Soul");
     }
 
     public void Soundtrack2(View view) {
+        setContentView(R.layout.activity_now_playing);
         st.Soundtrack2(this, view);
+        TextView song_name = findViewById(R.id.music_name);
+        song_name.setText("Heroism");
     }
 
     public void Soundtrack3(View view) {
+        setContentView(R.layout.activity_now_playing);
         st.Soundtrack3(this, view);
+        TextView song_name = findViewById(R.id.music_name);
+        song_name.setText("Powerful Trap");
     }
 
     public void SoundtrackControl(View view)
     {
         st.SoundtrackPause(view);
+    }
+
+    public void SoundTrackStop(View view)
+    {
+        st.SoundtrackStop(view);
+        setContentView(R.layout.activity_main);
     }
 
 }

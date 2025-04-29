@@ -21,6 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity{
 
+    public String song;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,29 +53,18 @@ public class MainActivity extends AppCompatActivity{
     }
 
     SoundTrack st = new SoundTrack();
+    NowPlaying np = new NowPlaying();
 
     public void Soundtrack1(View view) {
-        setContentView(R.layout.activity_now_playing);
-        TextView song_name = (TextView) findViewById(R.id.music_name);
-        String songname = "Tropical Souls";
         st.Soundtrack1(this, view);
-        song_name.setText(songname);
     }
 
     public void Soundtrack2(View view) {
-        setContentView(R.layout.activity_now_playing);
-        TextView song_name = (TextView) findViewById(R.id.music_name);
-        String songname = "Heroism";
         st.Soundtrack2(this, view);
-        song_name.setText(songname);
     }
 
     public void Soundtrack3(View view) {
-        setContentView(R.layout.activity_now_playing);
-        TextView song_name = (TextView) findViewById(R.id.music_name);
-        String songname = "Powerful Trap";
         st.Soundtrack3(this, view);
-        song_name.setText(songname);
     }
 
     public void SoundtrackControl(View view)

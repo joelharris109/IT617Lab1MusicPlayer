@@ -1,17 +1,10 @@
 package com.joelharris.lab1musicplayer;
 
 import android.content.Context;
-import android.icu.lang.UProperty;
-import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.view.View;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SoundTrack
 {
@@ -28,7 +21,13 @@ public class SoundTrack
 
     MediaPlayer mediaPlayer = new MediaPlayer();
 
+    public void changeTitle(String newTitle)
+    {
+        this.title = newTitle;
+    }
+
     public void Soundtrack1(Context context, View view) {
+        changeTitle("Tropical Soul");
         if(!mediaPlayer.isPlaying())
         {
             mediaPlayer = MediaPlayer.create(context, R.raw.luke_bergs_tropical_soul);
@@ -43,6 +42,7 @@ public class SoundTrack
     }
 
     public void Soundtrack2(Context context, View view) {
+        changeTitle("Tropical Soul");
         if(!mediaPlayer.isPlaying())
         {
             mediaPlayer = MediaPlayer.create(context, R.raw.maxkomusic_heroism);
@@ -57,6 +57,7 @@ public class SoundTrack
     }
 
     public void Soundtrack3(Context context, View view) {
+        changeTitle("Tropical Soul");
         if(!mediaPlayer.isPlaying())
         {
             mediaPlayer = MediaPlayer.create(context, R.raw.powerful_trap);
@@ -81,5 +82,4 @@ public class SoundTrack
             mediaPlayer.pause();
         }
     }
-
 }

@@ -29,42 +29,23 @@ public class SoundTrack
         }
     }
     public void Soundtrack1(Context context, View view) {
-        if(!mediaPlayer.isPlaying())
-        {
-            releaseMediaPlayer();
-            mediaPlayer = MediaPlayer.create(context, R.raw.luke_bergs_tropical_soul);
-            mediaPlayer.start();
-        }
+        releaseMediaPlayer();
+        mediaPlayer = MediaPlayer.create(context, R.raw.luke_bergs_tropical_soul);
+        mediaPlayer.start();
     }
 
     public void Soundtrack2(Context context, View view) {
-        if(!mediaPlayer.isPlaying())
-        {
-            releaseMediaPlayer();
-            mediaPlayer = MediaPlayer.create(context, R.raw.maxkomusic_heroism);
-            mediaPlayer.start();
-        }
+        releaseMediaPlayer();
+        mediaPlayer = MediaPlayer.create(context, R.raw.maxkomusic_heroism);
+        mediaPlayer.start();
     }
 
     public void Soundtrack3(Context context, View view) {
-        if(!mediaPlayer.isPlaying())
-        {
-            releaseMediaPlayer();
-            mediaPlayer = MediaPlayer.create(context, R.raw.powerful_trap);
-            mediaPlayer.start();
-        }
-    }
-
-    private void playTrack(Context context, int resId) {
-        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            return; // Already playing, don't restart
-        }
-
         releaseMediaPlayer();
-        mediaPlayer = MediaPlayer.create(context.getApplicationContext(), resId);
-        mediaPlayer.setOnCompletionListener(mp -> releaseMediaPlayer());
+        mediaPlayer = MediaPlayer.create(context, R.raw.powerful_trap);
         mediaPlayer.start();
     }
+
     public void SoundtrackPause(View view)
     {
         if(!mediaPlayer.isPlaying())

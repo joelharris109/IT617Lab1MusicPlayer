@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.ContentView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
@@ -56,24 +57,36 @@ public class MainActivity extends AppCompatActivity{
     NowPlaying np = new NowPlaying();
 
     public void Soundtrack1(View view) {
-        setContentView(R.layout.activity_now_playing);
+        /*setContentView(R.layout.activity_now_playing);
         st.Soundtrack1(this, view);
         TextView song_name = findViewById(R.id.music_name);
-        song_name.setText("Tropical Soul");
+        song_name.setText("Tropical Soul");*/
+        Intent intent = new Intent(this, NowPlaying.class);
+        intent.putExtra("song_name", "Tropical Soul");
+        intent.putExtra("track_id", 1);
+        startActivity(intent);
     }
 
     public void Soundtrack2(View view) {
-        setContentView(R.layout.activity_now_playing);
+        /*setContentView(R.layout.activity_now_playing);
         st.Soundtrack2(this, view);
         TextView song_name = findViewById(R.id.music_name);
-        song_name.setText("Heroism");
+        song_name.setText("Heroism");*/
+        Intent intent = new Intent(this, NowPlaying.class);
+        intent.putExtra("song_name", "Heroism");
+        intent.putExtra("track_id", 2);
+        startActivity(intent);
     }
 
     public void Soundtrack3(View view) {
-        setContentView(R.layout.activity_now_playing);
+        /*setContentView(R.layout.activity_now_playing);
         st.Soundtrack3(this, view);
         TextView song_name = findViewById(R.id.music_name);
-        song_name.setText("Powerful Trap");
+        song_name.setText("Powerful Trap");*/
+        Intent intent = new Intent(this, NowPlaying.class);
+        intent.putExtra("song_name", "Powerful Trap");
+        intent.putExtra("track_id", 3);
+        startActivity(intent);
     }
 
     public void SoundtrackControl(View view)
@@ -83,8 +96,8 @@ public class MainActivity extends AppCompatActivity{
 
     public void SoundTrackStop(View view)
     {
-        st.SoundtrackStop(view);
         setContentView(R.layout.activity_main);
+        st.SoundtrackStop(view);
     }
 
 }

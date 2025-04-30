@@ -10,7 +10,18 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="61dp"
+        app:cardBackgroundColor="@color/blue" >
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/darkblue"
+            android:onClick="SoundTrackExit"
+            app:srcCompat="@drawable/baseline_bungalow_24"
+            />
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imageView2"

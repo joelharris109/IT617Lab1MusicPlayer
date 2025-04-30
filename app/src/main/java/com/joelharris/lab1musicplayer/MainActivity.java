@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity{
     }
 
     SoundTrack st = new SoundTrack();
-    NowPlaying np = new NowPlaying();
 
     public void Soundtrack1(View view) {
         /*setContentView(R.layout.activity_now_playing);

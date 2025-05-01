@@ -1,19 +1,13 @@
 package com.joelharris.lab1musicplayer;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -50,7 +44,7 @@ public class NowPlaying extends AppCompatActivity {
 
         switch (trackId) {
             case 1:
-                st.Soundtrack1(this, null);
+                st.Soundtrack1(this);
                 is = this.getResources().openRawResource(R.raw.luke_bergs_tropical_soul_copyright);
                 reader = new BufferedReader(new InputStreamReader(is));
                 while (true) {
@@ -68,7 +62,7 @@ public class NowPlaying extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 break;
             case 2:
-                st.Soundtrack2(this, null);
+                st.Soundtrack2(this);
                 is = this.getResources().openRawResource(R.raw.maxkomusic_heroism_copyright);
                 reader = new BufferedReader(new InputStreamReader(is));
                 while (true) {
@@ -86,7 +80,7 @@ public class NowPlaying extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 break;
             case 3:
-                st.Soundtrack3(this, null);
+                st.Soundtrack3(this);
                 is = this.getResources().openRawResource(R.raw.powerful_trap_copyright);
                 reader = new BufferedReader(new InputStreamReader(is));
                 while (true) {

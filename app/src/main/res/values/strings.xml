@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab1MusicPlayer</string>
+    <string name="app_name">Music Player</string>
     <string name="tropical_soul">Tropical Soul</string>
     <string name="play">Play</string>
 </resources>

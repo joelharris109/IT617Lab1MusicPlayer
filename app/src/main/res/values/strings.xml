@@ -2,4 +2,7 @@
     <string name="app_name">Music Player</string>
     <string name="tropical_soul">Tropical Soul</string>
     <string name="play">Play</string>
+    <string name="no_song_playing">No Song Playing</string>
+    <string name="stop">Stop</string>
+    <string name="pause">||</string>
 </resources>

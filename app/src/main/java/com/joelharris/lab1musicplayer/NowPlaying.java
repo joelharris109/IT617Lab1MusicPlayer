@@ -58,8 +58,6 @@ public class NowPlaying extends AppCompatActivity {
                     copyright_info.setText(stringBuilder);
                 }
                 //is.close();
-                Toast.makeText(getBaseContext(), stringBuilder.toString(),
-                        Toast.LENGTH_LONG).show();
                 break;
             case 2:
                 st.Soundtrack2(this);
@@ -76,8 +74,6 @@ public class NowPlaying extends AppCompatActivity {
                     copyright_info.setText(stringBuilder);
                 }
                 //is.close();
-                Toast.makeText(getBaseContext(), stringBuilder.toString(),
-                        Toast.LENGTH_LONG).show();
                 break;
             case 3:
                 st.Soundtrack3(this);
@@ -94,8 +90,6 @@ public class NowPlaying extends AppCompatActivity {
                     copyright_info.setText(stringBuilder);
                 }
                 //is.close();
-                Toast.makeText(getBaseContext(), stringBuilder.toString(),
-                        Toast.LENGTH_LONG).show();
                 break;
             default:
                 break;

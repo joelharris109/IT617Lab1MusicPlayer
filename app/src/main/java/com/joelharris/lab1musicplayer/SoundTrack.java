@@ -6,12 +6,14 @@ import android.view.View;
 
 public class SoundTrack
 {
+
+    public static String CurrentSong;
     public SoundTrack()
     {
 
     }
 
-    MediaPlayer mediaPlayer = new MediaPlayer();
+    static MediaPlayer mediaPlayer = new MediaPlayer();
 
     private void releaseMediaPlayer() {
         if (mediaPlayer != null) {
@@ -42,7 +44,7 @@ public class SoundTrack
 
     public void SoundtrackPause(View view)
     {
-        if(mediaPlayer.isPlaying())
+        if(!mediaPlayer.isPlaying())
         {
             mediaPlayer.start();
         }
@@ -57,7 +59,6 @@ public class SoundTrack
         if(mediaPlayer.isPlaying())
         {
             mediaPlayer.stop();
-            releaseMediaPlayer();
         }
     }
 }

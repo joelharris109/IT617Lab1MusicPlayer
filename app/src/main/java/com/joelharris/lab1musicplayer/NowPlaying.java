@@ -1,5 +1,7 @@
 package com.joelharris.lab1musicplayer;
 
+import static com.joelharris.lab1musicplayer.SoundTrack.mediaPlayer;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class NowPlaying extends AppCompatActivity {
+    public static String songName;
+    public static int trackId = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +33,13 @@ public class NowPlaying extends AppCompatActivity {
             return insets;
         });
 
+
         Intent intent = getIntent();
-        String songName = intent.getStringExtra("song_name");
-        int trackId = intent.getIntExtra("track_id", -1);
+        String tmpSongName =  intent.getStringExtra("song_name");
+        if(tmpSongName != null){
+            songName = intent.getStringExtra("song_name");
+        }
+        trackId = intent.getIntExtra("track_id", trackId);
 
         TextView song_name = findViewById(R.id.music_name);
         song_name.setText(songName);
@@ -44,7 +52,10 @@ public class NowPlaying extends AppCompatActivity {
 
         switch (trackId) {
             case 1:
-                st.Soundtrack1(this);
+                mediaPlayer.stop();
+                if(!mediaPlayer.isPlaying()) {
+                    st.Soundtrack1(this);
+                }
                 is = this.getResources().openRawResource(R.raw.luke_bergs_tropical_soul_copyright);
                 reader = new BufferedReader(new InputStreamReader(is));
                 while (true) {
@@ -60,7 +71,10 @@ public class NowPlaying extends AppCompatActivity {
                 //is.close();
                 break;
             case 2:
-                st.Soundtrack2(this);
+                mediaPlayer.stop();
+                if(!mediaPlayer.isPlaying()) {
+                    st.Soundtrack2(this);
+                }
                 is = this.getResources().openRawResource(R.raw.maxkomusic_heroism_copyright);
                 reader = new BufferedReader(new InputStreamReader(is));
                 while (true) {
@@ -76,6 +90,7 @@ public class NowPlaying extends AppCompatActivity {
                 //is.close();
                 break;
             case 3:
+                mediaPlayer.stop();
                 st.Soundtrack3(this);
                 is = this.getResources().openRawResource(R.raw.powerful_trap_copyright);
                 reader = new BufferedReader(new InputStreamReader(is));
@@ -103,6 +118,9 @@ public class NowPlaying extends AppCompatActivity {
 
     public void SoundTrackStop(View view)
     {
+        //mediaPlayer.release();
+        trackId = -1;
+        songName = null;
         st.SoundtrackStop(view);
         finish();
     }

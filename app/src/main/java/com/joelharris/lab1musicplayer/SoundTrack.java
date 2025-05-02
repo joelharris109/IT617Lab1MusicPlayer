@@ -20,18 +20,21 @@ public class SoundTrack
         }
     }
     public void Soundtrack1(Context context) {
+        mediaPlayer.stop();
         releaseMediaPlayer();
         mediaPlayer = MediaPlayer.create(context, R.raw.luke_bergs_tropical_soul);
         mediaPlayer.start();
     }
 
     public void Soundtrack2(Context context) {
+        mediaPlayer.stop();
         releaseMediaPlayer();
         mediaPlayer = MediaPlayer.create(context, R.raw.maxkomusic_heroism);
         mediaPlayer.start();
     }
 
     public void Soundtrack3(Context context) {
+        mediaPlayer.stop();
         releaseMediaPlayer();
         mediaPlayer = MediaPlayer.create(context, R.raw.powerful_trap);
         mediaPlayer.start();
@@ -39,7 +42,7 @@ public class SoundTrack
 
     public void SoundtrackPause(View view)
     {
-        if(!mediaPlayer.isPlaying())
+        if(mediaPlayer.isPlaying())
         {
             mediaPlayer.start();
         }

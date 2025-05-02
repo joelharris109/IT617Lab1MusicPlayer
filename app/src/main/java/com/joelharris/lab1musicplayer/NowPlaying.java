@@ -110,6 +110,7 @@ public class NowPlaying extends AppCompatActivity {
     public void SoundTrackStop(View view)
     {
         st.SoundtrackStop(view);
+        finish();
     }
 
     public void SoundTrackExit(View view)

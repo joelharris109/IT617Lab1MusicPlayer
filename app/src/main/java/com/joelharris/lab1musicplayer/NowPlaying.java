@@ -91,7 +91,9 @@ public class NowPlaying extends AppCompatActivity {
                 break;
             case 3:
                 mediaPlayer.stop();
-                st.Soundtrack3(this);
+                if(!mediaPlayer.isPlaying()) {
+                    st.Soundtrack3(this);
+                }
                 is = this.getResources().openRawResource(R.raw.powerful_trap_copyright);
                 reader = new BufferedReader(new InputStreamReader(is));
                 while (true) {
